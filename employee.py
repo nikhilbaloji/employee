@@ -14,21 +14,26 @@ def assign_grade(gross_salary):
         return "Grade E"
 
 def main():
-    name = input("Employee Name: ")
-    emp_id = input("Employee ID: ")
-    department = input("Department: ")
+    # ---- Employee Details (Entered Here Only) ----
+    name = "Nikhil"
+    emp_id = "E032"
+    department = "IT"
 
-    basic = float(input("Basic Salary: "))
-    hra = float(input("HRA: "))
-    allowances = float(input("Allowances: "))
+    basic = 50000
+    hra = 20000
+    allowances = 10000
+    # --------------------------------------------
 
     gross_salary = calculate_gross_salary(basic, hra, allowances)
     grade = assign_grade(gross_salary)
 
-    print("\n----- Salary Report -----")
+    print("----- Salary Report -----")
     print("Name:", name)
     print("Employee ID:", emp_id)
     print("Department:", department)
+    print("Basic Salary: ₹", basic)
+    print("HRA: ₹", hra)
+    print("Allowances: ₹", allowances)
     print("Gross Salary: ₹", gross_salary)
     print("Grade:", grade)
 
